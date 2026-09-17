@@ -5,3 +5,6 @@ desktop.ini
 
 # Telegram-токен и chat ID — только локально и в секретах GitHub
 site/secrets.js
+
+# Приватные заметки по продаже
+SALES.md
