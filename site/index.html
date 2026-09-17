@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="MAC.FLO — свежие букеты, клубника в шоколаде и макаруны с доставкой по Екатеринбургу. Соберём букет или корзину под ваш повод." />
+  <meta name="theme-color" content="#f6f3ec" />
+  <title>MAC.FLO — букеты и десерты · Екатеринбург</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#catalog">К каталогу</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar__inner">
+      <a class="logo" href="#top" aria-label="MAC.FLO — на главную">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">MAC.FLO<small>studio</small></span>
+      </a>
+      <nav class="topnav" aria-label="Разделы">
+        <a href="#catalog">Букеты</a>
+        <a href="#sweets">Кондитерская</a>
+        <a href="#custom">На заказ</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="topbar__actions">
+        <a class="btn btn--ghost btn--sm topbar__tg" data-tg-link href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.04 15.6 8.9 19.4c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.7-12.6c.3-1.2-.4-1.6-1.2-1.3L3.6 11.7c-1.1.4-1.1 1.1-.2 1.4l3.9 1.2 9.1-5.7c.4-.3.8-.1.5.2z"/></svg>
+          <span>Написать</span>
+        </a>
+        <button class="cartbtn" type="button" data-open-cart aria-label="Открыть корзину">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 8h12l-1 11H7L6 8zm3 0V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cartbtn__label">Корзина</span>
+          <span class="cartbtn__count" data-cart-count hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-label="Главное">
+      <div class="hero__frame" data-hero-frame>
+        <div class="hero__media" data-hero-media>
+          <img src="img/hero.jpg" alt="" data-ph="hero.jpg · вертикальное фото букета крупно, 1600×2000" onerror="this.classList.add('is-missing')" />
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__content" data-hero-content>
+          <p class="hero__eyebrow">Екатеринбург · доставка от 90 минут</p>
+          <h1>Букеты и&nbsp;десерты, которые хочется дарить</h1>
+          <p class="hero__lead">Свежие цветы каждое утро, клубника в бельгийском шоколаде и макаруны ручной работы. Соберём под ваш повод и бюджет.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#catalog">Смотреть букеты</a>
+            <a class="btn btn--glass btn--lg" href="#custom">Собрать на заказ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORY NAV ================= -->
+    <nav class="catnav wrap" aria-label="Категории">
+      <a class="catnav__btn" href="#catalog">Букеты</a>
+      <a class="catnav__btn" href="#sweets">Клубника в шоколаде</a>
+      <a class="catnav__btn" href="#macarons">Макаруны</a>
+      <a class="catnav__btn" href="#custom-bouquet">Букет на заказ</a>
+      <a class="catnav__btn" href="#custom-basket">Корзина на заказ</a>
+    </nav>
+
+    <!-- ================= BOUQUETS ================= -->
+    <section class="section wrap" id="catalog">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Каталог</p>
+          <h2>Букеты</h2>
+        </div>
+        <p class="section__note">Фото — реальные букеты из нашей студии. Состав может немного отличаться в зависимости от поставки.</p>
+      </header>
+      <div class="grid" data-products="bouquets"></div>
+    </section>
+
+    <!-- ================= SWEETS ================= -->
+    <section class="section wrap" id="sweets">
+      <div class="sweets">
+        <header class="sweets__head">
+          <p class="eyebrow">Кондитерская</p>
+          <h2>Клубника в шоколаде</h2>
+          <p class="section__note">Свежие ягоды в бельгийском шоколаде — сами по себе или вместе с цветами в шляпной коробке. Хотите свой набор — соберём.</p>
+          <button class="btn btn--ghost" type="button" data-open-custom="berries">Собрать коробку с ягодами</button>
+        </header>
+        <div class="grid grid--2" data-products="berries"></div>
+      </div>
+    </section>
+
+    <!-- ================= MACARONS ================= -->
+    <section class="section wrap" id="macarons">
+      <article class="feature">
+        <div class="feature__media media">
+          <img src="img/macarons.jpg" alt="Макаруны с цветами в коробках-сердцах" data-ph="macarons" onerror="this.classList.add('is-missing')" />
+        </div>
+        <div class="feature__body">
+          <p class="eyebrow">Кондитерская</p>
+          <h2>Макаруны в наличии</h2>
+          <p>Макаруны ручной работы — в подарочных коробках, с живыми цветами или просто набором. Вкусы и количество подберём под вас.</p>
+          <ul class="checks">
+            <li>Всегда свежие, в наличии в студии</li>
+            <li>Коробка-сердце с цветами или классический набор</li>
+            <li>Можно добавить к любому букету</li>
+          </ul>
+          <button class="btn btn--primary btn--lg" type="button" data-open-custom="macarons">Собрать набор макарун</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= CUSTOM ORDER ================= -->
+    <section class="section wrap" id="custom">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Индивидуально</p>
+          <h2>Соберём под ваш повод</h2>
+        </div>
+        <p class="section__note">Расскажите бюджет и настроение — флорист соберёт, пришлёт фото на согласование и только потом доставит.</p>
+      </header>
+
+      <div class="custom">
+        <article class="custom__card" id="custom-bouquet">
+          <div class="custom__media media">
+            <img src="img/custom-bouquet.jpg" alt="" data-ph="custom-bouquet · флорист собирает букет" onerror="this.classList.add('is-missing')" />
+          </div>
+          <div class="custom__body">
+            <h3>Букет на заказ</h3>
+            <p>Любой бюджет от 2 000 ₽. Подберём цветы под повод, оттенки и характер получателя.</p>
+            <ul class="checks">
+              <li>Фото перед доставкой</li>
+              <li>Открытка с вашим текстом — бесплатно</li>
+              <li>Соберём за 2 часа</li>
+            </ul>
+            <button class="btn btn--primary" type="button" data-open-custom="bouquet">Собрать букет</button>
+          </div>
+        </article>
+
+        <article class="custom__card" id="custom-basket">
+          <div class="custom__media media">
+            <img src="img/custom-basket.jpg" alt="" data-ph="custom-basket · корзина с цветами и клубникой" onerror="this.classList.add('is-missing')" />
+          </div>
+          <div class="custom__body">
+            <h3>Корзина на заказ</h3>
+            <p>Цветы, клубника в шоколаде, макаруны — всё в одной корзине. Идеально на день рождения и юбилей.</p>
+            <ul class="checks">
+              <li>Цветы + десерты в одном подарке</li>
+              <li>От 3 500 ₽</li>
+              <li>Доставим в удобное время</li>
+            </ul>
+            <button class="btn btn--primary" type="button" data-open-custom="basket">Собрать корзину</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section wrap steps-section" id="how">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Просто</p>
+          <h2>Как заказать</h2>
+        </div>
+      </header>
+      <ol class="steps">
+        <li><span class="steps__n">1</span><h3>Выберите</h3><p>Букет из каталога или опишите, что хотите, в форме «на заказ».</p></li>
+        <li><span class="steps__n">2</span><h3>Оставьте контакты</h3><p>Телефон, адрес и время. Мы перезвоним или напишем в Telegram.</p></li>
+        <li><span class="steps__n">3</span><h3>Согласуйте фото</h3><p>Перед доставкой пришлём фото готового букета.</p></li>
+        <li><span class="steps__n">4</span><h3>Получите</h3><p>Курьер привезёт к нужному времени. Оплата — при получении или переводом.</p></li>
+      </ol>
+    </section>
+
+    <!-- ================= INSTAGRAM ================= -->
+    <section class="section wrap" id="insta">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Живые фото</p>
+          <h2>Мы в Telegram</h2>
+        </div>
+        <a class="btn btn--ghost" data-tg-link href="#" target="_blank" rel="noopener">@macflo66 ↗</a>
+      </header>
+      <div class="insta">
+        <a class="insta__item media" data-tg-link href="#" target="_blank" rel="noopener"><img src="img/insta-01.jpg" alt="" data-ph="insta-01" onerror="this.classList.add('is-missing')" /></a>
+        <a class="insta__item media" data-tg-link href="#" target="_blank" rel="noopener"><img src="img/insta-02.jpg" alt="" data-ph="insta-02" onerror="this.classList.add('is-missing')" /></a>
+        <a class="insta__item media" data-tg-link href="#" target="_blank" rel="noopener"><img src="img/insta-03.jpg" alt="" data-ph="insta-03" onerror="this.classList.add('is-missing')" /></a>
+        <a class="insta__item media" data-tg-link href="#" target="_blank" rel="noopener"><img src="img/insta-04.jpg" alt="" data-ph="insta-04" onerror="this.classList.add('is-missing')" /></a>
+        <a class="insta__item media" data-tg-link href="#" target="_blank" rel="noopener"><img src="img/insta-05.jpg" alt="" data-ph="insta-05" onerror="this.classList.add('is-missing')" /></a>
+        <a class="insta__item media" data-tg-link href="#" target="_blank" rel="noopener"><img src="img/insta-06.jpg" alt="" data-ph="insta-06" onerror="this.classList.add('is-missing')" /></a>
+      </div>
+    </section>
+
+    <!-- ================= DELIVERY & CONTACTS ================= -->
+    <section class="section wrap" id="delivery">
+      <div class="info">
+        <div class="info__card">
+          <p class="eyebrow">Доставка</p>
+          <h2>По Екатеринбургу — от 90 минут</h2>
+          <dl class="facts">
+            <div><dt>В пределах города</dt><dd>300 ₽ · бесплатно от 5 000 ₽</dd></div>
+            <div><dt>Ближайшие районы</dt><dd>по договорённости</dd></div>
+            <div><dt>Самовывоз</dt><dd>бесплатно, ежедневно 10:00–20:00</dd></div>
+            <div><dt>Оплата</dt><dd>перевод, наличные, карта курьеру</dd></div>
+          </dl>
+        </div>
+        <div class="info__card info__card--contacts" id="contacts">
+          <p class="eyebrow">Контакты</p>
+          <h2>Мы на связи каждый день</h2>
+          <dl class="facts">
+            <div><dt>Телефон</dt><dd><a href="tel:+79505598941">+7 950 559-89-41</a></dd></div>
+            <div><dt>Telegram</dt><dd><a data-tg-link href="#" target="_blank" rel="noopener">написать в Telegram</a></dd></div>
+            <div><dt>Адрес</dt><dd>Екатеринбург, ул. Посадская, 21</dd></div>
+            <div><dt>Режим работы</dt><dd>Ежедневно 10:00–20:00</dd></div>
+          </dl>
+          <a class="btn btn--primary" data-tg-link href="#" target="_blank" rel="noopener">Написать в Telegram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p><strong>MAC.FLO studio</strong> · цветы и десерты, Екатеринбург</p>
+      <p>© <span data-year></span> · Демонстрационный макет</p>
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE BOTTOM BAR ================= -->
+  <nav class="bottombar" aria-label="Быстрые действия">
+    <a href="#catalog"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 5h6v6H4zM14 5h6v6h-6zM4 13h6v6H4zM14 13h6v6h-6z"/></svg><span>Каталог</span></a>
+    <a href="#custom"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg><span>На заказ</span></a>
+    <a data-tg-link href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.04 15.6 8.9 19.4c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.7-12.6c.3-1.2-.4-1.6-1.2-1.3L3.6 11.7c-1.1.4-1.1 1.1-.2 1.4l3.9 1.2 9.1-5.7c.4-.3.8-.1.5.2z"/></svg><span>Telegram</span></a>
+    <button type="button" data-open-cart><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 8h12l-1 11H7L6 8zm3 0V6a3 3 0 0 1 6 0v2"/></svg><span>Корзина</span><b data-cart-count hidden>0</b></button>
+  </nav>
+
+  <!-- ================= CART DRAWER ================= -->
+  <div class="overlay" data-overlay hidden></div>
+  <aside class="drawer" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <header class="drawer__head">
+      <h2 id="cart-title">Корзина</h2>
+      <button class="iconbtn" type="button" data-close-drawer aria-label="Закрыть">✕</button>
+    </header>
+
+    <div class="drawer__body" data-cart-view="items">
+      <div class="cart-empty" data-cart-empty>
+        <p>Пока пусто.</p>
+        <a class="btn btn--primary" href="#catalog" data-close-drawer>Выбрать букет</a>
+      </div>
+      <ul class="cart-list" data-cart-list></ul>
+    </div>
+
+    <footer class="drawer__foot" data-cart-foot hidden>
+      <div class="drawer__total"><span>Итого</span><strong data-cart-total>0 ₽</strong></div>
+      <p class="drawer__hint">Доставка считается после подтверждения. От 5 000 ₽ — бесплатно.</p>
+      <button class="btn btn--primary btn--lg btn--block" type="button" data-go-checkout>Оформить заказ</button>
+    </footer>
+
+    <!-- checkout form -->
+    <form class="drawer__body checkout" data-cart-view="checkout" hidden novalidate>
+      <button class="linkbtn" type="button" data-back-to-cart>← Назад в корзину</button>
+      <h3>Куда и когда доставить</h3>
+
+      <fieldset class="seg" aria-label="Способ получения">
+        <label><input type="radio" name="fulfil" value="delivery" checked /><span>Доставка</span></label>
+        <label><input type="radio" name="fulfil" value="pickup" /><span>Самовывоз</span></label>
+      </fieldset>
+
+      <label class="field"><span>Ваше имя</span><input name="name" required autocomplete="name" placeholder="Анна" /></label>
+      <label class="field"><span>Телефон</span><input name="phone" required type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" /></label>
+      <label class="field" data-address-field><span>Адрес доставки</span><input name="address" autocomplete="street-address" placeholder="Улица, дом, квартира" /></label>
+      <div class="field-row">
+        <label class="field"><span>Дата</span><input name="date" type="date" required /></label>
+        <label class="field"><span>Время</span>
+          <select name="time" required>
+            <option value="">Выберите</option>
+            <option>10:00–13:00</option><option>13:00–16:00</option><option>16:00–20:00</option>
+          </select>
+        </label>
+      </div>
+      <label class="field"><span>Текст открытки <em>необязательно</em></span><input name="card" placeholder="С днём рождения, мама!" /></label>
+      <label class="field"><span>Комментарий <em>необязательно</em></span><textarea name="comment" rows="2" placeholder="Позвонить за час, не звонить в домофон…"></textarea></label>
+
+      <div class="drawer__total"><span>Итого</span><strong data-cart-total>0 ₽</strong></div>
+      <button class="btn btn--primary btn--lg btn--block" type="submit">Отправить заказ</button>
+      <p class="drawer__hint">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Мы перезвоним для подтверждения.</p>
+    </form>
+
+    <!-- success -->
+    <div class="drawer__body success" data-cart-view="success" hidden>
+      <div class="success__icon" aria-hidden="true">✓</div>
+      <h3>Заказ <span data-order-no>№1</span> принят</h3>
+      <p>Мы уже получили его в Telegram и скоро свяжемся с вами для подтверждения.</p>
+      <button class="btn btn--primary" type="button" data-close-drawer>Отлично</button>
+    </div>
+  </aside>
+
+  <!-- ================= CUSTOM ORDER MODAL ================= -->
+  <div class="modal" id="custom-modal" role="dialog" aria-modal="true" aria-labelledby="custom-title" hidden>
+    <form class="modal__card" novalidate>
+      <header class="drawer__head">
+        <h2 id="custom-title">Букет на заказ</h2>
+        <button class="iconbtn" type="button" data-close-modal aria-label="Закрыть">✕</button>
+      </header>
+      <div class="modal__body">
+        <input type="hidden" name="kind" value="bouquet" />
+        <div class="field">
+          <span data-budget-label>Бюджет</span>
+          <div class="chips" data-chips="budget"></div>
+        </div>
+        <div class="field">
+          <span>Повод</span>
+          <div class="chips" data-chips="occasion">
+            <button type="button" class="chip">День рождения</button>
+            <button type="button" class="chip">Свидание</button>
+            <button type="button" class="chip">Маме</button>
+            <button type="button" class="chip">Юбилей</button>
+            <button type="button" class="chip">Просто так</button>
+          </div>
+        </div>
+        <div class="field">
+          <span data-palette-label>Оттенки</span>
+          <div class="chips chips--colors" data-chips="colors" data-multi></div>
+        </div>
+        <div class="field" data-extra-field hidden>
+          <span data-extra-label>Вкусы</span>
+          <div class="chips" data-chips="extra" data-multi></div>
+        </div>
+        <label class="field"><span>Пожелания <em>необязательно</em></span><textarea name="wish" rows="2" placeholder="Любит пионы, без лилий, нужен большой…"></textarea></label>
+        <div class="field-row">
+          <label class="field"><span>Ваше имя</span><input name="name" required placeholder="Анна" /></label>
+          <label class="field"><span>Телефон</span><input name="phone" required type="tel" inputmode="tel" placeholder="+7 900 000-00-00" /></label>
+        </div>
+        <label class="field"><span>Когда нужно</span><input name="date" type="date" /></label>
+      </div>
+      <footer class="modal__foot">
+        <button class="btn btn--primary btn--lg btn--block" type="submit">Отправить заявку</button>
+        <a class="btn btn--ghost btn--block" data-tg-link href="#" target="_blank" rel="noopener">Или написать в Telegram напрямую</a>
+      </footer>
+      <div class="modal__success" hidden>
+        <div class="success__icon" aria-hidden="true">✓</div>
+        <h3>Заявка отправлена</h3>
+        <p>Флорист свяжется с вами в течение 15 минут в рабочее время.</p>
+        <button class="btn btn--primary" type="button" data-close-modal>Хорошо</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="secrets.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

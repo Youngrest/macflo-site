@@ -1,0 +1,7 @@
+.claude/
+*.zip
+Thumbs.db
+desktop.ini
+
+# Telegram-токен и chat ID — только локально и в секретах GitHub
+site/secrets.js

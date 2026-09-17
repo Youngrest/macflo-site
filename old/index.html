@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Макет лендинга цветочного магазина с витриной и промо-слайдером." />
+    <meta name="theme-color" content="#f5f2eb" />
+    <title>Макет цветочного магазина</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <div class="notice">Доставка по городу в день заказа · Ежедневно с 9:00 до 21:00</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="store-name" href="#main" aria-label="На главную">Название магазина</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <a href="#catalog">Каталог</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#about">О магазине</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <button class="cart-button" type="button" aria-label="Корзина, товаров: 0">Корзина <span class="cart-count" aria-live="polite">0</span></button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container" aria-label="Актуальные предложения">
+        <div class="carousel" tabindex="0" aria-roledescription="карусель">
+          <div class="slides">
+            <article class="slide slide--sage" aria-hidden="false">
+              <div class="slide-copy">
+                <p class="eyebrow">Акция недели · 01</p>
+                <h1>Цветы для важных моментов</h1>
+                <p>Здесь будет короткое предложение, которое объясняет акцию или главное преимущество магазина.</p>
+                <a class="primary-button" href="#catalog">Смотреть витрину <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="hero-placeholder" role="img" aria-label="Место для изображения акционного букета">
+                <span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">💐</span><span>Место для изображения</span></span><small>акция или букет · 1600 × 1100</small>
+              </div>
+            </article>
+            <article class="slide slide--clay" aria-hidden="true">
+              <div class="slide-copy">
+                <p class="eyebrow">Специальное предложение · 02</p>
+                <h2>Скидка 15% на сезонные букеты</h2>
+                <p>Промо-текст можно заменить условиями акции, сроками и кнопкой перехода в нужную категорию.</p>
+                <a class="primary-button" href="#catalog">Выбрать букет <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="hero-placeholder" role="img" aria-label="Место для изображения сезонного букета">
+                <span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🌷</span><span>Место для изображения</span></span><small>сезонная коллекция · 1600 × 1100</small>
+              </div>
+            </article>
+            <article class="slide slide--sand" aria-hidden="true">
+              <div class="slide-copy">
+                <p class="eyebrow">Новая коллекция · 03</p>
+                <h2>Букеты, собранные под ваш повод</h2>
+                <p>Третий слайд можно использовать для новинок, доставки или услуги индивидуальной сборки.</p>
+                <a class="primary-button" href="#about">Как мы работаем <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="hero-placeholder" role="img" aria-label="Место для изображения авторского букета">
+                <span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🌸</span><span>Место для изображения</span></span><small>авторский букет · 1600 × 1100</small>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <ul class="benefits" aria-label="Преимущества магазина">
+          <li><strong>Свежая поставка</strong><span>Каждое утро</span></li>
+          <li><strong>Фото перед доставкой</strong><span>Отправим в мессенджер</span></li>
+          <li><strong>Открытка бесплатно</strong><span>Добавим ваш текст</span></li>
+          <li><strong>Доставка от 60 минут</strong><span>По городу</span></li>
+        </ul>
+      </section>
+
+      <section class="catalog-section container" id="catalog">
+        <div class="section-heading">
+          <div><p class="eyebrow">Витрина</p><h2>Популярные букеты</h2></div>
+          <p>Здесь администратор сможет менять названия, цены, фотографии и порядок товаров.</p>
+        </div>
+        <div class="filters" aria-label="Фильтр товаров">
+          <button class="filter-button is-active" type="button" data-filter="bouquet" aria-pressed="true">Букеты</button>
+          <button class="filter-button" type="button" data-filter="mono" aria-pressed="false">Монобукеты</button>
+          <button class="filter-button" type="button" data-filter="basket" aria-pressed="false">Корзины</button>
+          <button class="filter-button" type="button" data-filter="confectionery" aria-pressed="false">Кондитерская</button>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-category="bouquet" data-id="bouquet-01" data-name="Букет №01" data-price="3490">
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">💐</span><span>Фото букета</span></span><small>01</small></div>
+            <div class="product-meta"><div><h3>Букет №01</h3><p>Авторский · средний</p></div><strong>3 490 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать один Букет №01">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё один Букет №01">+</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="mono" data-id="mono-02" data-name="Букет №02" data-price="2790" hidden>
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🌷</span><span>Фото букета</span></span><small>02</small></div>
+            <div class="product-meta"><div><h3>Букет №02</h3><p>Монобукет · 15 цветов</p></div><strong>2 790 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать один Букет №02">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё один Букет №02">+</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="basket" data-id="basket-03" data-name="Композиция №03" data-price="4150" hidden>
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🧺</span><span>Фото композиции</span></span><small>03</small></div>
+            <div class="product-meta"><div><h3>Композиция №03</h3><p>Корзина · компактная</p></div><strong>4 150 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать одну Композицию №03">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё одну Композицию №03">+</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="bouquet" data-id="bouquet-04" data-name="Букет №04" data-price="5600">
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🌹</span><span>Фото букета</span></span><small>04</small></div>
+            <div class="product-meta"><div><h3>Букет №04</h3><p>Авторский · большой</p></div><strong>5 600 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать один Букет №04">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё один Букет №04">+</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="mono" data-id="mono-05" data-name="Букет №05" data-price="3950" hidden>
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🌼</span><span>Фото букета</span></span><small>05</small></div>
+            <div class="product-meta"><div><h3>Букет №05</h3><p>Монобукет · 25 цветов</p></div><strong>3 950 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать один Букет №05">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё один Букет №05">+</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="basket" data-id="basket-06" data-name="Композиция №06" data-price="6290" hidden>
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🧺</span><span>Фото композиции</span></span><small>06</small></div>
+            <div class="product-meta"><div><h3>Композиция №06</h3><p>Корзина · большая</p></div><strong>6 290 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать одну Композицию №06">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё одну Композицию №06">+</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="confectionery" data-id="strawberry-07" data-name="Клубника в шоколаде" data-price="1790" hidden>
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🍓</span><span>Фото набора</span></span><small>07</small></div>
+            <div class="product-meta"><div><h3>Клубника в шоколаде</h3><p>Кондитерская · 12 ягод</p></div><strong>1 790 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать один набор клубники в шоколаде">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё один набор клубники в шоколаде">+</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="confectionery" data-id="macarons-08" data-name="Макаруны" data-price="1290" hidden>
+            <div class="product-placeholder"><span class="placeholder-content"><span class="placeholder-emoji" aria-hidden="true">🍬</span><span>Фото набора</span></span><small>08</small></div>
+            <div class="product-meta"><div><h3>Макаруны</h3><p>Кондитерская · 12 штук</p></div><strong>1 290 ₽</strong></div>
+            <div class="product-action">
+              <button class="add-button" type="button">В корзину <span>+</span></button>
+              <div class="quantity-control" hidden><button type="button" data-action="decrease" aria-label="Убрать один набор макарун">−</button><span class="quantity-value">1</span><button type="button" data-action="increase" aria-label="Добавить ещё один набор макарун">+</button></div>
+            </div>
+          </article>
+        </div>
+        <button class="secondary-button" type="button">Показать ещё товары</button>
+      </section>
+
+      <section class="custom-order" id="about">
+        <div class="container custom-order-grid">
+          <div><p class="eyebrow">Индивидуальный заказ</p><h2>Соберём букет под ваш бюджет и повод</h2></div>
+          <p>Этот блок ведёт к форме заявки или в мессенджер. Позже сюда можно добавить выбор оттенков, размера и даты доставки.</p>
+          <a class="light-button" href="#contacts">Обсудить заказ <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="process container" id="delivery">
+        <div class="section-heading"><div><p class="eyebrow">Простой заказ</p><h2>Как это работает</h2></div></div>
+        <ol class="process-grid">
+          <li><span>01</span><h3>Выберите букет</h3><p>Добавьте товар из витрины в корзину.</p></li>
+          <li><span>02</span><h3>Оставьте контакты</h3><p>Укажите телефон, адрес и время доставки.</p></li>
+          <li><span>03</span><h3>Подтвердите заказ</h3><p>Администратор свяжется с вами для уточнения деталей.</p></li>
+        </ol>
+      </section>
+
+      <section class="contact-section container" id="contacts">
+        <div class="contact-main">
+          <p class="eyebrow">Контакты</p><h2>Будем на связи</h2>
+          <p>Телефон, адрес магазина, ссылки на мессенджеры и режим работы будут находиться здесь.</p>
+        </div>
+        <dl class="contact-list">
+          <div><dt>Телефон</dt><dd>+7 (000) 000-00-00</dd></div>
+          <div><dt>Адрес</dt><dd>Город, улица, дом</dd></div>
+          <div><dt>Режим работы</dt><dd>Ежедневно, 9:00–21:00</dd></div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Название магазина</p><p>© <span id="year"></span> · Макет лендинга</p><a href="#main">Наверх ↑</a>
+      </div>
+    </footer>
+    <div class="cart-overlay" aria-hidden="true"></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+      <div class="cart-drawer-header">
+        <div><p class="eyebrow">Ваш заказ</p><h2 id="cart-title">Корзина</h2></div>
+        <button class="cart-close" type="button" aria-label="Закрыть корзину">×</button>
+      </div>
+      <div class="cart-drawer-body">
+        <p class="cart-empty">В корзине пока нет товаров.</p>
+        <ul class="cart-items" aria-live="polite"></ul>
+      </div>
+      <div class="cart-drawer-footer" hidden>
+        <span>Итого</span><strong class="cart-total">0 ₽</strong>
+      </div>
+    </aside>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
